@@ -1,0 +1,29 @@
+kind: IngressRoute
+apiVersion: traefik.containo.us/v1alpha1
+metadata:
+  name: home-assistant
+  namespace: default
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: HostRegexp(`home-assistant.{domain}.{ext}`)
+      kind: Rule
+      services:
+        - name: home-assistant
+          port: 8123
+---
+kind: IngressRoute
+apiVersion: traefik.containo.us/v1alpha1
+metadata:
+  name: vscode
+  namespace: default
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: HostRegexp(`vscode.{domain}.{ext}`)
+      kind: Rule
+      services:
+        - name: vscode
+          port: 8080

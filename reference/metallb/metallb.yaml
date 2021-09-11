@@ -1,0 +1,23 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: metallb
+  namespace: kube-system
+spec:
+  interval: 100m
+  chart:
+    spec:
+      chart: metallb
+      version: v0.10.2
+      sourceRef:
+        kind: HelmRepository
+        name: metallb
+        namespace: flux-system
+  values:
+    configInline:
+      address-pools:
+        - name: default
+          protocol: layer2
+          addresses:
+            - x.x.x.200-x.x.x.250

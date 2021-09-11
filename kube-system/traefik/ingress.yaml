@@ -1,0 +1,14 @@
+kind: IngressRoute
+apiVersion: traefik.containo.us/v1alpha1
+metadata:
+  name: dashboard
+  namespace: kube-system
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: HostRegexp(`traefik.{domain}.{ext}`)
+      kind: Rule
+      services:
+        - name: api@internal
+          kind: TraefikService

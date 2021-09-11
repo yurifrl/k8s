@@ -1,0 +1,21 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: jetstack-charts
+  namespace: flux-system
+spec:
+  interval: 10m
+  url: https://charts.jetstack.io/
+  timeout: 3m
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: jetstack-repository
+  namespace: flux-system
+spec:
+  interval: 100m
+  url: https://github.com/jetstack/cert-manager
+  ref:
+    branch: master
