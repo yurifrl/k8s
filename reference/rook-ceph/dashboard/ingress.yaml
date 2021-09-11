@@ -1,14 +1,14 @@
 kind: IngressRoute
 apiVersion: traefik.containo.us/v1alpha1
 metadata:
-  name: longhorn
+  name: rook
   namespace: kube-system
 spec:
   entryPoints:
     - web
   routes:
-    - match: HostRegexp(`longhorn.{domain}.{ext}`)
+    - match: HostRegexp(`rook.{domain}.{ext}`)
       kind: Rule
       services:
-        - name: longhorn-frontend
-          port: 80
+        - name: rook-ceph-mgr-dashboard
+          port: 7000

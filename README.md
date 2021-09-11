@@ -13,9 +13,15 @@
 
 - [https://github.com/cloudflare/argo-tunnel-examples](https://github.com/cloudflare/argo-tunnel-examples/tree/master/named-tunnel-k8s)
 - https://github.com/billimek/k8s-gitops
+- [Automating Your Home with K3s and Home Assistant - Eddie Zaneski & Jeff Billimek](https://www.youtube.com/watch?v=icyTnoonRqI)
 
 ## Docs
 
 - https://longhorn.io/
 - [Use cloudflared to expose a Kubernetes app to the Internet](https://developers.cloudflare.com/cloudflare-one/tutorials/many-cfd-one-tunnel)
 - [Share development environments](https://developers.cloudflare.com/cloudflare-one/tutorials/share-new-site)
+
+## Consider
+
+- [ ] https://thanos.io/tip/thanos/quick-tutorial.md/
+- [ ] https://grafana.com/docs/loki/latest/installation/helm/

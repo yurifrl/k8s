@@ -3,7 +3,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: longhorn
-  namespace: kube-system
+  namespace: longhorn-system
 spec:
   interval: 5m
   chart:
@@ -16,8 +16,26 @@ spec:
         name: longhorn
         namespace: flux-system
   values:
+    persistence:
+      defaultClassReplicaCount: 1
+      recurringJobSelector:
+        enable: true
+        jobList: '[
+          {
+            "name":"snap",
+            "task":"snapshot",
+            "cron":"*/1 * * * *",
+            "retain":5
+          },
+          {
+            "name":"backup",
+            "task":"backup",
+            "cron":"*/2 * * * *",
+            "retain":5
+          }
+        ]'
     defaultSettings:
-      backupTarget: "s3://yuri-longhorn@sa-east-1/"
+      backupTarget: "s3://homey-bucket@sa-east-1/longhorn/"
       backupTargetCredentialSecret: "aws-secret"
       # allowRecurringJobWhileVolumeDetached: ~
       # createDefaultDiskLabeledNodes: ~
@@ -28,7 +46,7 @@ spec:
       # storageOverProvisioningPercentage: ~
       # storageMinimalAvailablePercentage: ~
       # upgradeChecker: ~
-      # defaultReplicaCount: ~
+      # defaultReplicaCount: 1
       # defaultLonghornStaticStorageClass: ~
       # backupstorePollInterval: ~
       # taintToleration: ~

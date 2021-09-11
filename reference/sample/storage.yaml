@@ -24,6 +24,9 @@ spec:
           volumeMounts:
             - name: data
               mountPath: /usr/share/nginx/html
+          env:
+            - name: MNT_PATH
+              value: /usr/share/nginx/html
       volumes:
         - name: data
           persistentVolumeClaim:
@@ -62,8 +65,11 @@ kind: PersistentVolumeClaim
 metadata:
   name: sample-storage-pvc
   namespace: default
-  # annotations:
-  #   recurring-job-group.longhorn.io/default: enabled
+  labels:
+    app: storage
+    name: sample-storage-pvc
+  annotations:
+    recurring-job-group.longhorn.io/default: enabled
 spec:
   accessModes:
     - ReadWriteOnce
