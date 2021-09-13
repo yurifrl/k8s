@@ -5,7 +5,7 @@ metadata:
   name: jetstack-charts
   namespace: flux-system
 spec:
-  interval: 10m
+  interval: 24h0m0s
   url: https://charts.jetstack.io/
   timeout: 3m
 ---
@@ -15,7 +15,7 @@ metadata:
   name: jetstack-repository
   namespace: flux-system
 spec:
-  interval: 100m
+  interval: 24h0m0s
   url: https://github.com/jetstack/cert-manager
   ref:
     branch: master

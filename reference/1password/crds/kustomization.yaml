@@ -4,7 +4,7 @@ metadata:
   name: 1password
   namespace: vault
 spec:
-  interval: 100m
+  interval: 24h0m0s
   path: ./charts/connect/crds/
   prune: true
   sourceRef:

@@ -5,7 +5,7 @@ metadata:
   name: metallb
   namespace: kube-system
 spec:
-  interval: 100m
+  interval: 24h0m0s
   chart:
     spec:
       chart: metallb

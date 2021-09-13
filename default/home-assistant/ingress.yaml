@@ -25,5 +25,35 @@ spec:
     - match: HostRegexp(`vscode.{domain}.{ext}`)
       kind: Rule
       services:
-        - name: vscode
+        - name: home-assistant-codeserver
+          port: 12321
+---
+kind: IngressRoute
+apiVersion: traefik.containo.us/v1alpha1
+metadata:
+  name: zigbee2mqtt
+  namespace: default
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: HostRegexp(`zigbee2mqtt.{domain}.{ext}`)
+      kind: Rule
+      services:
+        - name: zigbee2mqtt
           port: 8080
+---
+kind: IngressRoute
+apiVersion: traefik.containo.us/v1alpha1
+metadata:
+  name: node-red
+  namespace: default
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: HostRegexp(`node-red.{domain}.{ext}`)
+      kind: Rule
+      services:
+        - name: node-red
+          port: 1880

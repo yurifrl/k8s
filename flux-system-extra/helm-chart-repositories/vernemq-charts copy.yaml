@@ -2,9 +2,9 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
-  name: vmware-tanzu-charts
+  name: vernemq-charts
   namespace: flux-system
 spec:
   interval: 24h0m0s
-  url: https://vmware-tanzu.github.io/helm-charts
+  url: https://vernemq.github.io/docker-vernemq
   timeout: 3m
