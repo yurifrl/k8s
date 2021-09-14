@@ -2,9 +2,9 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
-  name: sealed-secrets-charts
+  name: prometheus-community
   namespace: flux-system
 spec:
   interval: 24h0m0s
-  url: https://bitnami-labs.github.io/sealed-secrets
+  url: https://prometheus-community.github.io/helm-charts
   timeout: 3m

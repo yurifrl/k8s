@@ -2,9 +2,9 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
-  name: vernemq-charts
+  name: k8s-at-home
   namespace: flux-system
 spec:
   interval: 24h0m0s
-  url: https://vernemq.github.io/docker-vernemq
+  url: https://k8s-at-home.com/charts
   timeout: 3m
