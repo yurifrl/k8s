@@ -19,7 +19,7 @@ spec:
   values:
     image:
       repository: nodered/node-red
-      tag: 2.0.6-12-minimal
+      tag: latest-12
     env:
       TZ: "America/Sao_Paulo"
       FLOWS: "flows.json"

@@ -47,3 +47,11 @@
 - [ ] https://www.home-assistant.io/integrations/alexa.smart_home/#create-an-amazon-alexa-smart-home-skill
 - [ ] Implement sealed secrets https://github.com/carpenike/k8s-gitops/blob/49dede4b0572f88b43394be6bd2912d5144bf2ca/cluster/base/cluster-secrets.yaml
 - [ ] implement some kind of monitoring, like pagerduty or status page, prometheus based
+
+# Node RED
+
+- https://community.home-assistant.io/t/home-assistant-community-add-on-node-red/55023
+- https://docs.cb-net.co.uk/en/development/getting-started.html
+- https://github.com/hassio-addons/addon-node-red
+- https://hacs.xyz/docs/configuration/basic
+- https://github.com/zachowj/hass-node-red

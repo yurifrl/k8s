@@ -16,6 +16,9 @@ spec:
         name: k8s-at-home
         namespace: flux-system
   values:
+    image:
+      repository: koenkk/zigbee2mqtt
+      tag: latest-dev
     env:
       TZ: "America/Sao_Paulo"
       ZIGBEE2MQTT_DATA: /data
