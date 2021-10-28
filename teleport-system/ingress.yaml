@@ -1,0 +1,14 @@
+kind: IngressRoute
+apiVersion: traefik.containo.us/v1alpha1
+metadata:
+  name: teleport
+  namespace: teleport-system
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: HostRegexp(`teleport.{domain}.{ext}`)
+      kind: Rule
+      services:
+        - name: teleport-cluster
+          port: 443

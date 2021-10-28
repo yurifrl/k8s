@@ -13,6 +13,9 @@
 - [Share development environments](https://developers.cloudflare.com/cloudflare-one/tutorials/share-new-site)
 - [zigbee2mqtt config](https://www.zigbee2mqtt.io/information/configuration.html)
 
+## Usefull
+- [YCC365 Cameras integration](https://github.com/fjramirez1987/PTZ-YCC365)
+
 ## Consider
 - [ ] https://thanos.io/tip/thanos/quick-tutorial.md/
 - [ ] https://grafana.com/docs/loki/latest/installation/helm/
@@ -49,7 +52,6 @@
 - [ ] implement some kind of monitoring, like pagerduty or status page, prometheus based
 
 # Node RED
-
 - https://community.home-assistant.io/t/home-assistant-community-add-on-node-red/55023
 - https://docs.cb-net.co.uk/en/development/getting-started.html
 - https://github.com/hassio-addons/addon-node-red
