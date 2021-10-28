@@ -82,4 +82,4 @@ spec:
       image:
         registry: docker.io
         repository: postgres
-        tag: 12
+        tag: 14
