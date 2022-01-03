@@ -1,0 +1,14 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: sourcegraph
+  namespace: sourcegraph
+spec:
+  interval: 24h0m0s
+  path: ./base
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: sourcegraph
+    namespace: flux-system
+  validation: client

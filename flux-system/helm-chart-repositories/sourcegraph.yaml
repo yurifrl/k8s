@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: sourcegraph
+  namespace: flux-system
+spec:
+  interval: 24h0m0s
+  url: https://github.com/sourcegraph/deploy-sourcegraph
+  ref:
+    branch: master

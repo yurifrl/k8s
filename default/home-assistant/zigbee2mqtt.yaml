@@ -36,6 +36,11 @@ spec:
         port: 8080
       experimental:
         new_api: true
+      # https://github.com/k8s-at-home/charts/blob/master/charts/stable/zigbee2mqtt/values.yaml#L108
+      advanced:
+        log_output:
+          - console
+        log_level: error
     persistence:
       config:
         enabled: true
